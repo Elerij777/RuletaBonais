@@ -1,10 +1,12 @@
 package javaapplication6;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -39,9 +41,17 @@ public class RuletaRifa extends javax.swing.JFrame {
 
         numeroLabel = new JLabel("Presiona el botón para girar la ruleta", SwingConstants.CENTER);
         numeroLabel.setFont(new Font("Serif", Font.BOLD, 18));
+        numeroLabel.setOpaque(true);
+        numeroLabel.setBackground(new Color(255, 255, 255));
+        numeroLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         add(numeroLabel, BorderLayout.CENTER);
 
         botonRuleta = new JButton("Girar Ruleta");
+        botonRuleta.setFont(new Font("Serif", Font.BOLD, 16));
+        botonRuleta.setBackground(new Color(70, 130, 180));
+        botonRuleta.setForeground(Color.WHITE);
+        botonRuleta.setFocusPainted(false);
+        botonRuleta.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
         add(botonRuleta, BorderLayout.SOUTH);
 
         // Inicializar el generador de números aleatorios
